@@ -1,0 +1,187 @@
+/**
+ * Site header
+ */
+.site-header {
+  height: 40px;
+  // Positioning context for the mobile navigation icon
+  position: relative;
+  background: $white;
+}
+
+.site-title {
+  font-size: 18px;
+  line-height: 40px;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $brand-color;
+  border-bottom: 2px solid transparent;
+
+  &:hover, &:focus {
+    color: $brand-color;
+    text-decoration: none;
+    border-bottom: 2px solid #EEE;        
+  }
+
+  &:visited {
+    color: $brand-color;
+  }
+}
+
+.site-nav {
+  float: right;
+  line-height: 40px;
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+}
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+
+/**
+ * Page content
+ */
+.page-content {
+  padding: $spacing-unit 0;
+}
+
+.page-heading {
+  font-size: 20px;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    font-size: 36px;
+  }
+}
+
+
+/**
+ * Work Window
+ */
+.work-window {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  height: 0;
+  margin-bottom: 40px;
+  transition: height .35s ease-in-out;
+
+  img {
+    max-height: 100%;
+  }
+
+  &.js-open {
+    height: 80vh;
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+
+/**
+ * Work Items
+ */
+.work {
+  margin-bottom: 40px;
+}
+
+
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    font-size: 32px;
+
+    @include media-query($on-laptop) {
+      font-size: 28px;
+    }
+  }
+
+  h3 {
+    font-size: 26px;
+
+    @include media-query($on-laptop) {
+      font-size: 22px;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+
+    @include media-query($on-laptop) {
+      font-size: 18px;
+    }
+  }
+}

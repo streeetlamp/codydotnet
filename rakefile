@@ -1,0 +1,37 @@
+require 'rake'
+require 'date'
+
+desc 'create a new work post'
+task :work do
+  title = ENV['title']
+  slug = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
+
+  file = File.join(
+    File.dirname(__FILE__),
+    '_work',
+    slug + '.markdown'
+  )
+
+  File.open(file, "w") do |f|
+    f << <<-EOS.gsub(/^    /, '')
+    ---
+    layout: work
+    title: #{title}
+    date: #{slug}
+    images:
+      - name: #{title}-1.jpg
+        thumb: #{title}-thumb-1.jpg
+        text:
+    ---
+
+    EOS
+
+  end
+
+  system ("#{ENV['EDITOR']} #{file}")
+
+end
+
+#
+# $rake work title="example"
+#

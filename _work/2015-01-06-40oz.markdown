@@ -1,0 +1,14 @@
+---
+layout: work
+title: 40oz
+date: 2015-01-06-40oz
+images:
+- name: 40oz-1.png
+  thumb: 40oz-thumb-1.png
+  text:
+- name: 40oz-2.jpg
+  thumb: 40oz-thumb-2.jpg
+  text:
+---
+
+Lorem Ipsum

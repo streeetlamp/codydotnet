@@ -1,0 +1,10 @@
+---
+layout: work
+title: fulldays
+date: 2015-01-07-fulldays
+images:
+  - name: fulldays-1.jpg
+    thumb: fulldays-thumb-1.jpg
+    text:
+---
+

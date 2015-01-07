@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="window-wrap">
+    <div class="work-window">
+    </div>
+  </div>
+
+  <div id="index-grid" class="work-index" data-columns>
+    {% for work in site.work %}
+        {% for image in work.images %}
+          <div class="work">
+            <a class="post-link" href="img/{{ image.name | prepend: site.baseurl }}">
+              <img src="img/{{ image.thumb }}">
+            </a>
+          </div>
+        {%  endfor %}
+    {% endfor %}
+  </div>
+
+</div>

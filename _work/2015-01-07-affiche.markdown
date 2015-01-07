@@ -1,0 +1,10 @@
+---
+layout: work
+title: affiche
+date: 2015-01-07-affiche
+images:
+  - name: AFFICHE-1.png
+    thumb: AFFICHE-thumb-1.png
+    text:
+---
+
