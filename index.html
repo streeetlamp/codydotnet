@@ -4,20 +4,26 @@ layout: default
 
 <div class="home">
 
-  <div class="window-wrap">
-    <div class="work-window">
-    </div>
-  </div>
-
   <div id="index-grid" class="work-index" data-columns>
     {% for work in site.work %}
-        {% for image in work.images %}
-          <div class="work">
-            <a class="post-link" href="img/{{ image.name | prepend: site.baseurl }}">
-              <img src="img/{{ image.thumb }}">
-            </a>
+      <div class="work">
+        <a class="post-link" href="{{ work.url }}">
+          {% for image in work.images limit:1 %}
+            <img src="img/{{ image.thumb }}">
+          {% endfor %}
+        </a>
+
+        <div class="work-preview">
+          <div class="preview-meta">
+            <h1>{{ work.title }}</h1>
           </div>
-        {%  endfor %}
+          <div class="preview-img">
+            {% for image in work.images limit:1 %}
+              <img class="lazy" data-original="img/{{ image.name }}">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     {% endfor %}
   </div>
 
