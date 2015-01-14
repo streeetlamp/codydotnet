@@ -4,7 +4,7 @@ require 'date'
 desc 'create a new work post'
 task :work do
   title = ENV['title']
-  slug = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
+  slug = "#{title.downcase.gsub(/[^\w]+/, '-')}"
 
   file = File.join(
     File.dirname(__FILE__),
@@ -17,7 +17,8 @@ task :work do
     ---
     layout: work
     title: #{title}
-    date: #{slug}
+    year:
+    posted: #{Date.today}
     images:
       - name: #{title}-1.jpg
         thumb: #{title}-thumb-1.jpg
